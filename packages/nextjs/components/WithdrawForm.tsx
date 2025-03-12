@@ -21,13 +21,13 @@ const WithdrawForm: React.FC<WithdrawFormProps> = ({ onWithdraw }) => {
   };
 
   return (
-    <div className="p-6 bg-gradient-to-r from-purple-400 to-pink-500 text-white rounded-lg shadow-lg mx-auto mt-6">
+    <div className="p-6 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-xl shadow-xl mx-auto mt-6 transition-all duration-300">
       <h2 className="text-2xl font-bold mb-4">Снять средства</h2>
       <button
         onClick={handleSubmit}
         disabled={isProcessing}
-        className={`w-full py-2 rounded-lg text-white ${
-          isProcessing ? "bg-gray-500" : "bg-pink-500 hover:bg-pink-600"
+        className={`w-full py-3 rounded-xl text-white font-semibold transition-all duration-300 ${
+          isProcessing ? "bg-gray-400 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-700"
         }`}
       >
         {isProcessing ? "Обработка..." : "Снять средства"}
